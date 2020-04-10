@@ -1,0 +1,22 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.location-container > h1 > span {
+  color: rgb(105, 221, 27);
+}
+
+.location-container select {
+  border: 1px solid #333;
+}
+
+.card {
+  width: 18rem;
+}
+
+.card > img {
+  height: 16rem;
+}

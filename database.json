@@ -1,0 +1,195 @@
+{
+  "locations": [
+    { "id": 1, "name": "Delhi" },
+    { "id": 2, "name": "Kanpur" },
+    { "id": 3, "name": "Mumbai" },
+    { "id": 4, "name": "Bangalore" },
+    { "id": 5, "name": "Punjab" },
+    { "id": 6, "name": "Dehradun" },
+    { "id": 7, "name": "Kolkata" }
+  ],
+  "threater": [
+    {
+      "id": 1,
+      "name": "SouthX",
+      "locations": [1, 4, 6],
+      "img": "https://images.unsplash.com/photo-1524985069026-dd778a71c7b4?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "seats": {
+        "silver": {
+          "count": 24,
+          "price": "120"
+        },
+        "gold": {
+          "count": 30,
+          "price": "220"
+        },
+        "platinum": {
+          "count": 15,
+          "price": "320"
+        }
+      }
+    },
+    {
+      "id": 2,
+      "name": "Rave 3",
+      "locations": [1, 3, 5],
+      "img": "https://images.unsplash.com/photo-1520088258008-0f0a636a00a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "seats": {
+        "silver": {
+          "count": 24,
+          "price": "120"
+        },
+        "gold": {
+          "count": 30,
+          "price": "220"
+        },
+        "platinum": {
+          "count": 15,
+          "price": "320"
+        }
+      }
+    },
+    {
+      "id": 3,
+      "name": "Cineplex",
+      "locations": [2, 4, 7],
+      "img": "https://images.unsplash.com/photo-1485095329183-d0797cdc5676?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "seats": {
+        "silver": {
+          "count": 24,
+          "price": "120"
+        },
+        "gold": {
+          "count": 30,
+          "price": "220"
+        },
+        "platinum": {
+          "count": 15,
+          "price": "320"
+        }
+      }
+    },
+    {
+      "id": 4,
+      "name": "Inox",
+      "locations": [3, 6, 7],
+      "img": "https://images.unsplash.com/photo-1507924538820-ede94a04019d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "seats": {
+        "silver": {
+          "count": 24,
+          "price": "120"
+        },
+        "gold": {
+          "count": 30,
+          "price": "220"
+        },
+        "platinum": {
+          "count": 15,
+          "price": "320"
+        }
+      }
+    },
+    {
+      "id": 5,
+      "name": "Carnivals",
+      "locations": [1, 5, 6],
+      "img": "https://images.unsplash.com/photo-1458053688450-eef5d21d43b3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "seats": {
+        "silver": {
+          "count": 24,
+          "price": "120"
+        },
+        "gold": {
+          "count": 30,
+          "price": "220"
+        },
+        "platinum": {
+          "count": 15,
+          "price": "320"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "name": "Miraj",
+      "locations": [2],
+      "img": "https://images.unsplash.com/photo-1517604931442-7e0c8ed2963c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "seats": {
+        "silver": {
+          "count": 24,
+          "price": "120"
+        },
+        "gold": {
+          "count": 30,
+          "price": "220"
+        },
+        "platinum": {
+          "count": 15,
+          "price": "320"
+        }
+      }
+    }
+  ],
+  "movies": [
+    {
+      "id": 1,
+      "movie": "Baghban",
+      "start": "10:00 AM",
+      "hour": "2",
+      "min": "30",
+      "poster": "https://images.unsplash.com/photo-1440404653325-ab127d49abc1?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "threater": [1, 4, 3, 2],
+      "lang": "Hindi"
+    },
+    {
+      "id": 1,
+      "movie": "Aashiqui 2",
+      "start": "12:15 PM",
+      "hour": "2",
+      "min": "30",
+      "poster": "https://images.unsplash.com/photo-1486693128850-a77436e7ba3c?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "threater": [3, 5, 6, 2],
+      "lang": "Hindi"
+    },
+    {
+      "id": 1,
+      "movie": "Koi mil gaya",
+      "start": "3:15 PM",
+      "hour": "2",
+      "min": "30",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVAFaAJm6akpcyQ4msrvFLKLQKuI-S_D5fkH0AwknjyNQF1Ju_&usqp=CAU",
+      "threater": [2, 4, 6, 3],
+      "lang": "Hindi"
+    },
+    {
+      "id": 1,
+      "movie": "Kabir singh",
+      "start": "6:30 PM",
+      "hour": "2",
+      "min": "30",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRZiI3woBMIfSnR3K1TCWdRCmrxO7BlmzQZFscH6u5EF4DDvFl3&usqp=CAU",
+      "threater": [2, 6, 1, 2],
+      "lang": "English"
+    },
+    {
+      "id": 1,
+      "movie": "Avengers Endgame",
+      "start": "9:00 PM",
+      "hour": "2",
+      "min": "30",
+      "poster": "https://images.unsplash.com/photo-1561149877-84d268ba65b8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+      "threater": [2, 3, 4, 5, 6],
+      "lang": "English"
+    },
+    {
+      "id": 1,
+      "movie": "Ek Villan",
+      "start": "11:00 PM",
+      "hour": "2",
+      "min": "30",
+      "poster": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR1fTT4UwBwufQARB6LQN_SMg6Gl47RNDIfPxB-y8JUCXzLBIRb&usqp=CAU",
+      "threater": [6, 4, 2, 5, 1],
+      "lang": "English"
+    }
+  ]
+}
