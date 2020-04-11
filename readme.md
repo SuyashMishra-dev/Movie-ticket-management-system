@@ -18,18 +18,15 @@ User will follow a decision tree
 
 <img src="assets/readme/process.png">
 
-##### Installation Step
-
-Steps to Run server for data
-
-```
-npm install -g json-server
-```
-
-```
-$ json-server --watch db.json --port 5000
-```
-
 #### Todo
 
-- [ ] User Able to Select Location
+- [x] User Able to Select Location
+- [x] User Able to Select threater
+- [x] User Able to Select Movie
+- [x] User Able to Select Seats Choice
+- [x] Three Different Classes Of Seats
+  - Gold
+  - Platinum
+  - Silver
+- [x] Bill Calculated With Booked Seat Summary
+- [x] Confirmation Page
