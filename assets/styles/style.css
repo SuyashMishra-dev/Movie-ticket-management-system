@@ -43,3 +43,75 @@ h1 > span {
 .my-dark {
   background: #333;
 }
+
+.silver {
+  color: silver;
+}
+
+.gold {
+  color: gold;
+}
+
+.platinum {
+  color: paleturquoise;
+}
+
+.grid-seats {
+  width: 500px;
+  margin: 20px auto;
+}
+
+.seats-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.seats-flex i {
+  font-size: 1.5rem;
+  cursor: pointer;
+  margin: 3px;
+}
+
+.seats-flex i:hover {
+  opacity: 0.7;
+}
+
+/* Price span color width */
+
+#price-details {
+  margin-top: 4rem;
+}
+
+#price-details p {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.pricesilver {
+  background: silver;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.priceplatinum {
+  background: paleturquoise;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.pricegold {
+  background: gold;
+  display: inline-block;
+  height: 10px;
+  width: 10px;
+}
+
+.span-width {
+  height: 10px;
+  width: 10px;
+}
