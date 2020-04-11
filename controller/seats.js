@@ -1,13 +1,24 @@
 let threater = new Threater();
+let movie = new Movie();
 // UI variables
 let seats = document.getElementById("seats");
 let priceDiv = document.getElementById("price-details");
+let thName = document.querySelector(".threater-name");
+let movName = document.querySelector(".movie-name");
+let showTime = document.querySelector(".show-time");
+let duration = document.querySelector(".duration");
 
 let selectedSeat = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   let thId = localStorage.getItem("threater_id");
   let threaterDetail = threater.getThreateByID(thId);
+
+  let movieId = localStorage.getItem("movie_id");
+  let movieDetail = movie.getMovieById(movieId);
+  console.log(movieDetail);
+  // Details
+  threaterAndMovieDetails(threaterDetail, movieDetail);
 
   //   Populate Seats
 
@@ -104,6 +115,7 @@ function updateBillInformation(selectedSeat) {
     }
     let span = document.createElement("span");
     span.style.margin = "0px 5px";
+    span.className = "badge badge-info";
     span.innerHTML = selectedSeat[i];
     selSeat.appendChild(span);
   }
@@ -114,11 +126,28 @@ function updateBillInformation(selectedSeat) {
   platinumCount.innerHTML = pt;
   goldCount.innerHTML = gd;
 
-  silPrice.innerHTML = sl * 120;
-  plaitnumPrice.innerHTML = pt * 320;
-  goldPrice.innerHTML = gd * 220;
+  silPrice.innerHTML = sl * 120 + " Rs";
+  plaitnumPrice.innerHTML = pt * 320 + " Rs";
+  goldPrice.innerHTML = gd * 220 + " Rs";
 
   calculateTotalPrice(sl * 120, pt * 320, gd * 220);
 }
 
-function calculateTotalPrice(sl, pt, gd) {}
+function calculateTotalPrice(sl, pt, gd) {
+  let total = document.getElementById("total");
+  total.innerHTML = sl + pt + gd + " Rs";
+}
+
+function threaterAndMovieDetails(threaterDetails, movieDetails) {
+  // Append threater name
+  thName.innerHTML = threaterDetails.name;
+
+  // Append movie name
+  movName.innerHTML = movieDetails.movie;
+
+  // Append Show Time
+  showTime.innerHTML = movieDetails.start;
+
+  // Append Movie Duration
+  duration.innerHTML = movieDetails.duration;
+}

@@ -26,31 +26,69 @@
           <div id="seats"></div>
           <div id="price-details"></div>
         </div>
-        <div class="col-lg-6" id="details">
+        <div
+          class="col-lg-6 d-flex align-items-center flex-column"
+          id="details"
+        >
           <h5>Bill Information</h5>
-          <div></div>
-          <div class="bill">
-            <p>Selected Seat</p>
+          <div id="threater-details" class="card pt-3 text-left">
+            <p class="pl-3">
+              <span>Threater</span>
+              <span class="threater-name text-warning float-right pr-3"></span>
+            </p>
+            <p class="pl-3">
+              <span>Movie</span>
+              <span class="movie-name text-warning float-right pr-3"></span>
+            </p>
+            <p class="pl-3">
+              <span>Show Time</span>
+              <span class="show-time text-warning float-right pr-3"></span>
+            </p>
+            <p class="pl-3">
+              <span>Duration</span>
+              <span class="duration text-warning float-right pr-3"></span>
+            </p>
+          </div>
+          <div class="bill card p-3 my-3">
+            <p class="">Selected Seat</p>
             <div id="selected-seat"></div>
-            <div>
+            <div class="pt-4 text-left">
               <span
-                >Silver X <span class="sel-silver"></span> =
-                <span class="sel-silver-price"></span> RS
+                >Silver
+                <span class="sel-silver ml-5 text-primary">0</span>
+                <span class="sel-silver-price float-right text-danger"
+                  >0 Rs</span
+                >
               </span>
             </div>
-            <div>
+            <div class="pt-4 text-left">
               <span
-                >Gold X <span class="sel-gold"></span> =
-                <span class="sel-gold-price"></span> RS
+                >Gold &nbsp;<span class="sel-gold ml-5 text-primary">0</span>
+                <span class="sel-gold-price float-right text-danger">0 Rs</span>
               </span>
             </div>
-            <div>
+            <div class="pt-4 text-left">
               <span
-                >Platinum X <span class="sel-platinum"></span> =
-                <span class="sel-platinum-price"></span> RS
+                >Platinum <span class="sel-platinum ml-4 text-primary">0</span>
+                <span class="sel-platinum-price float-right text-danger"
+                  >0 Rs</span
+                >
               </span>
             </div>
           </div>
+
+          <div class="total card py-3 px-3">
+            <div class="d-flex justify-content-between">
+              <span>Total Amount</span>
+              <span class="text-danger font-weight-bold" id="total">0 Rs</span>
+            </div>
+          </div>
+          <a href="#" class="text-white btn btn-primary w-50 my-3"
+            >Confirm Booking</a
+          >
+          <a href="index.html" class="text-white btn btn-danger w-50"
+            >Cancel Booking</a
+          >
         </div>
       </div>
     </div>
