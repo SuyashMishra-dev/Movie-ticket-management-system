@@ -39,7 +39,16 @@ const fetchThreater = async (e) => {
   let threaterDiv = document.querySelector(".threater");
   // Empty threater div
   threaterDiv.innerHTML = "";
+  let flag;
+  if (threaterDiv.innerHTML == "") {
+    flag = false;
+  }
   cityTreaters.forEach((item) => {
+    flag = true;
+    // Create col-4 div
+    let colDiv = document.createElement("div");
+    // Add Class to col div
+    colDiv.classList.add("col-md-4");
     // Create card div
     let cardDiv = document.createElement("div");
     cardDiv.setAttribute("class", "card mx-2 mt-3");
@@ -70,8 +79,15 @@ const fetchThreater = async (e) => {
     // Append card body div in card div
     cardDiv.appendChild(cardBodyDiv);
     // Append card into threater div
-    threaterDiv.appendChild(cardDiv);
+    colDiv.appendChild(cardDiv);
+    // Append card into col div
+    threaterDiv.appendChild(colDiv);
   });
+  if (flag) {
+    // Fill text in UI variable
+    let h2 = document.getElementById("threater-text");
+    h2.innerHTML = "Select Your Movie Threater";
+  }
 };
 
 const fetchMovies = (e, id) => {

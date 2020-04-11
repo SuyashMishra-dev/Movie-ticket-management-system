@@ -5,7 +5,7 @@ body {
   box-sizing: border-box;
 }
 
-.location-container > h1 > span {
+h1 > span {
   color: rgb(105, 221, 27);
 }
 
@@ -19,4 +19,27 @@ body {
 
 .card > img {
   height: 16rem;
+}
+
+.overlay1 p {
+  font-weight: 300;
+  letter-spacing: 3px;
+  padding: 0 8rem !important;
+}
+
+.con-2 {
+  background: #333;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.my-dark {
+  background: #333;
 }

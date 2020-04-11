@@ -1,29 +1,66 @@
 const movie = new Movie();
-
+let copyMovieList = [];
 // Get threater id from local storage
 
 let threaterId = localStorage.getItem("threater_id");
+let selectMovieLang, selectMovieGenre;
 
 document.addEventListener("DOMContentLoaded", async () => {
   let movies = await movie.getAllMoviesOfThreater(threaterId);
-  displayMovies(movies);
+  populateMovies(movies);
+
+  //UI Variables
+  selectMovieLang = document.getElementById("lang");
+  selectMovieGenre = document.getElementById("genre");
+
+  // Add Event Listner on select box
+  selectMovieLang.addEventListener("change", (e) =>
+    displayLangMovies(e, movies)
+  );
+
+  // Add Event Listner on select box
+  selectMovieGenre.addEventListener("change", (e) =>
+    displayGenreMovies(e, movies)
+  );
 });
 
-const displayMovies = (movieList) => {
+const displayLangMovies = (e, movies) => {
+  console.log("Called");
+  let lang = selectMovieLang.value;
+  let genre = selectMovieGenre.value;
+
+  let movieToPopulate = movie.getMovieOnFilter(movies, lang, genre);
+
   // UI div for append all cards
+  populateMovies(movieToPopulate);
+};
+
+const displayGenreMovies = (e, movies) => {
+  let lang = selectMovieLang.value;
+  let genre = selectMovieGenre.value;
+
+  let movieToPopulate = movie.getMovieOnFilter(movies, lang, genre);
+
+  // UI div for append all cards
+  populateMovies(movieToPopulate);
+};
+
+function populateMovies(movieList) {
   let movieDiv = document.querySelector(".movies");
   // Empty value of div
   movieDiv.innerHTML = "";
 
   movieList.forEach((item) => {
+    // Create col-4 div
+    let colDiv = document.createElement("div");
+    // Add Class to col div
+    colDiv.classList.add("col-md-4");
     // Create card div
     let cardDiv = document.createElement("div");
     cardDiv.setAttribute("class", "card mx-2 mt-3");
     // Create img
     let img = document.createElement("img");
     img.setAttribute("src", item.poster);
-    console.log(item.poster, item);
-
     img.setAttribute("class", "card-img-top");
     // Create card body div
     let cardBodyDiv = document.createElement("div");
@@ -61,6 +98,15 @@ const displayMovies = (movieList) => {
     // Append card body div in card div
     cardDiv.appendChild(cardBodyDiv);
     // Append card into threater div
-    movieDiv.appendChild(cardDiv);
+    colDiv.appendChild(cardDiv);
+    // Append card into col div
+    movieDiv.appendChild(colDiv);
   });
+}
+
+const bookMovies = (e, id) => {
+  e.preventDefault();
+  console.log(id, "--");
+  localStorage.setItem("movie_id", id);
+  window.location.href = "/views/booked.html";
 };

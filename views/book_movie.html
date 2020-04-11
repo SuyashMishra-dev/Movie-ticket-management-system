@@ -17,12 +17,26 @@
     <title>Book Movie</title>
   </head>
   <body>
-    <h1>Book Movie</h1>
-    <select name="" id="lang">
-      <option value="hindi">Hindi</option>
-      <option value="english">English</option>
-    </select>
-    <div class="movies d-flex flex-wrap justify-content-arround"></div>
+    <h1 class="text-center mt-3"><span>Book</span> Movie</h1>
+    <div class="container pt-3">
+      <select class="custom-select custom-select-sm" id="lang">
+        <option selected value="">Select Language</option>
+        <option value="hi">Hindi</option>
+        <option value="en">English</option>
+        <option value="ta">Tamil</option>
+      </select>
+      <select class="custom-select custom-select-sm mt-3" id="genre">
+        <option selected value="">Select Type</option>
+        <option value="action">Action</option>
+        <option value="romantic">Romantic</option>
+        <option value="adventure">Adventure</option>
+        <option value="drama">Drama</option>
+        <option value="horror">Horror</option>
+      </select>
+    </div>
+    <div class="container">
+      <div class="movies row mt-3 d-flex justify-content-center"></div>
+    </div>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
