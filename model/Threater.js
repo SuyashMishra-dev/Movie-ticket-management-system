@@ -7,7 +7,7 @@ class Threater {
   getThreateByLocation(id = 1) {
     const xhr = new XMLHttpRequest();
     return new Promise((resolve, reject) => {
-      xhr.open("GET", "http://localhost:5000/threater");
+      xhr.open("GET", "https://suyashmishra-data.herokuapp.com/threater");
       xhr.onload = () => {
         if (xhr.status === 200) {
           let data = JSON.parse(xhr.response);

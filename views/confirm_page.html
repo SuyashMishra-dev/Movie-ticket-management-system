@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Baloo+Thambi+2:wght@400;500;700&family=Poppins:wght@100;200;300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <title>Order No</title>
+  </head>
+  <body>
+    <div
+      class="container d-flex align-items-center justify-content-center flex-column"
+      style="height: 100vh;"
+    >
+      <h2 class="mb-5">Your Movie Is Booked</h2>
+      <div class="card mb-3 mx-auto" style="width: 640px;">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="" class="card-img" id="poster" alt="..." />
+          </div>
+          <div class="col-md-8 p-3">
+            <div class="card-body">
+              <h5 class="card-title threater-name"></h5>
+              <p class="card-text movie-name"></p>
+              <p class="card-text show-time"></p>
+              <p>Booked Seats</p>
+              <div class="seats"></div>
+            </div>
+            <a href="/views/index.html" class="btn btn-primary">Back To Home</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="/model/Threater.js"></script>
+    <script src="/model/Movie.js"></script>
+    <script src="/controller/confirmPage.js"></script>
+  </body>
+</html>

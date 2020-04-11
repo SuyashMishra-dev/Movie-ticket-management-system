@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let movieId = localStorage.getItem("movie_id");
   let movieDetail = movie.getMovieById(movieId);
-  console.log(movieDetail);
   // Details
   threaterAndMovieDetails(threaterDetail, movieDetail);
 
@@ -118,6 +117,8 @@ function updateBillInformation(selectedSeat) {
     span.className = "badge badge-info";
     span.innerHTML = selectedSeat[i];
     selSeat.appendChild(span);
+
+    localStorage.setItem("selected", JSON.stringify(selectedSeat));
   }
 
   console.log(sl, pt, gd);
@@ -148,6 +149,8 @@ function threaterAndMovieDetails(threaterDetails, movieDetails) {
   // Append Show Time
   showTime.innerHTML = movieDetails.start;
 
+  let hour = movieDetails.hour;
+  let min = movieDetails.min;
   // Append Movie Duration
-  duration.innerHTML = movieDetails.duration;
+  duration.innerHTML = `${hour} hr ${min} min`;
 }

@@ -5,7 +5,7 @@ class Movie {
   getAllMoviesOfThreater(id) {
     return new Promise((resolve, reject) => {
       let xhr = new XMLHttpRequest();
-      xhr.open("GET", "http://localhost:5000/movies");
+      xhr.open("GET", "https://suyashmishra-data.herokuapp.com/movies");
       xhr.onload = () => {
         if (xhr.status === 200) {
           let data = JSON.parse(xhr.response);
